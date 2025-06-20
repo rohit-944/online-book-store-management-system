@@ -35,9 +35,10 @@ public class BookServiceImpl {
         try {
             List<Books> books = bookDao.findAll();
             logger.info("Number of books found: {}", books.size());
-//            if (books.isEmpty()) {
-//                logger.warn("No books found in the database.");
-//            }
+            logger.info("Books details: {}", books.toString());
+            if (books.isEmpty()) {
+                logger.warn("No books found in the database.");
+            }
             return books;
         } catch (Exception e) {
             logger.error("Error fetching books: {}", e.getMessage());
