@@ -5,13 +5,11 @@ import java.util.List;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.inn.rohit.model.Books;
+import com.inn.rohit.model.Users;
 
 @Repository
-public interface BookDao extends JpaRepository<Books, Integer> {
+public interface UserDao extends JpaRepository<Users, Integer> {
 	
-	
-    List<Books> findByTitle(String name);
-    
-    
+	List<Users> findByName(String name);
+
 }
